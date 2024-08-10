@@ -1,0 +1,40 @@
+/* assets/styles.css */
+
+/* Set dark gray background and white text color for the entire page */
+body {
+    background-color: #2f2f2f;
+    /* Dark gray background */
+    color: #ffffff;
+    /* White text color */
+}
+
+/* Custom styles for Cytoscape */
+#cytoscape {
+    background-color: #cfcfcf;
+    /* Light gray background for the Cytoscape plot */
+}
+
+/* Custom styles for DataTable */
+.dash-table-container .dash-spreadsheet {
+    background-color: #2f2f2f;
+    /* Dark gray background for the table */
+    color: #ffffff;
+    /* White text color */
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner {
+    background-color: #2f2f2f;
+    /* Dark gray for table content */
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td,
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th {
+    background-color: #2f2f2f;
+    /* Dark gray for table cells */
+    color: #ffffff;
+    /* White text color */
+    border: 1px solid #555;
+    /* Light gray border color */
+}
+
+/* Additional styling for all other elements as needed */
