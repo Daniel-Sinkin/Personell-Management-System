@@ -61,9 +61,10 @@ conn = connect()
 try:
     members = query_all_members(conn)
     member_id_to_children_id = query_all_relationships(conn)
-except:
-    members = None
-    member_id_to_children_id = None
+except Exception as e:
+    print(f"Caught generic {type(e)} '{e}'.")
+    members = []
+    member_id_to_children_id = {}
 finally:
     conn.close()
 
