@@ -1,3 +1,7 @@
+"""
+Hardcoded PostgreSQL data entry for testing purposes.
+"""
+
 import os
 
 import psycopg2
@@ -8,7 +12,6 @@ load_dotenv()
 
 
 def connect() -> connection:
-    """Connect to the PostgreSQL database using environment variables."""
     return psycopg2.connect(
         dbname=os.getenv("DB_NAME"),
         user=os.getenv("DB_USER"),

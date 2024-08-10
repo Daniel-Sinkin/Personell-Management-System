@@ -1,10 +1,8 @@
 import os
-from dataclasses import dataclass, field
 
 import dash_cytoscape as cyto
 import psycopg2
-import ujson as json
-from dash import Dash, Input, Output, dash_table, dcc, html, no_update
+from dash import Dash, Input, Output, dash_table, html, no_update
 from dotenv import load_dotenv
 from psycopg2.extensions import connection
 
@@ -25,7 +23,7 @@ def connect() -> connection:
 def query_all_members(conn) -> list[Member]:
     """Query all members and their direct commissions."""
     with conn.cursor() as cur:
-        cur.execute(f"SELECT uuid, name, direct_commission, kickback_rate FROM members")
+        cur.execute("SELECT uuid, name, direct_commission, kickback_rate FROM members")
         members_data = cur.fetchall()
         members = []
         for member_data in members_data:
